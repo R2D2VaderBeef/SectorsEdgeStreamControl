@@ -13,6 +13,8 @@ You can click on the green "Code" button at the top right, and then click on "Do
 2. **Install the dependencies.**
 Make sure you have Python 3.3 or newer installed.
 
+Also install AutoHotKey from their official website.
+
 Run the following command in your terminal:
 `pip install ahk` 
 
