@@ -15,7 +15,7 @@ Make sure you have Python 3.3 or newer installed.
 
 Also install AutoHotKey from their official website.
 
-Run the following command in your terminal:
+Then. run the following command in your terminal:
 `pip install ahk` 
 
 3. **Input your Twitch account details.**
