@@ -11,6 +11,7 @@ This might be annoying to do - sorry!
 You can click on the green "Code" button at the top right, and then click on "Download ZIP".
 
 2. **Install the dependencies.**
+
 Make sure you have Python 3.3 or newer installed.
 
 Also install AutoHotKey from their official website.
