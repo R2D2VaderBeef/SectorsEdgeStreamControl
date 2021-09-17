@@ -11,6 +11,9 @@ from actions import crouch
 from actions import jump
 from actions import shoot
 from actions import scope
+from actions import reload
+from actions import melee
+from actions import grenade
 
 # Sample way to run an action
 #async def test():
@@ -36,18 +39,25 @@ async def handleMessage(message):
     elif message == "jump":
         await jump.act()    
     elif message == "shoot":
-        await shoot.act(1/4)
+        await shoot.act(1/2)
     elif message == "scope":
         await scope.act(1.5)
+    elif message == "reload":
+        await reload.act(1/4)
+    elif message == "melee":
+        await melee.act()
+    elif message == "grenade":
+        await grenade.act(1/5)
     else:
-        print("Not a command.")
+        # print("Not a command.")
+        return
 
 # garbo i wrote to test this code
 async def testFunc():
-    task1 = asyncio.create_task(handleMessage("scope"))
-    task2 = asyncio.create_task(handleMessage("shoot"))
-    await task1
+    task2 = asyncio.create_task(handleMessage("grenade"))
+    tast3 = asyncio.create_task(handleMessage("melee"))
     await task2
+    await tast3
 
 asyncio.run(testFunc())
 
