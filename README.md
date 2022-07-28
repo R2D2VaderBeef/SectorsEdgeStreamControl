@@ -3,6 +3,10 @@
 
 This code listens to messages from your Twitch chat (via your own Twitch account) and presses buttons/keys accordingly to make you do an action in-game. 
 
+Currently, this system only supports Hold to Scope / Hold to Crouch rather than Toggle. You also need to input your binds manually if they are different to mine.
+
+Neither of these caveats will be present in the final version, in which I hope to pull binds directly from the game settings files.
+
 ## Setup
 
 1. **Download all the files.** 
@@ -38,3 +42,52 @@ TWITCHTOKEN=oauth:xxxxxxxxx
 ```
 
 4. **Run the program** by running `python main.py` in your terminal.
+
+You should see the following messages in the console: 
+```
+Connecting to Twitch IRC: irc.chat.twitch.tv on port 6667
+Joining #yourtwitch
+```
+In case you only see the first one, this can indicate that something has gone wrong. If you're sure you've setup your credentials correctly, exit the program and try again. 
+
+Press `Ctrl+C` to exit.
+
+Whenever a valid command is run, you will see logs of the random number calculated to check against the `probability` setting, e.g.
+```
+Command SCOPE => Prob: 1.0 Random: 0.7
+```
+
+ If the command is run, a further line will be logged:
+```
+Acted: SCOPE
+```
+
+## Config Settings
+
+All configuration is done within the `.env` file. Every setting other than the Twitch credentials has a default filled in already.
+
+You might want to change the prefix in case it clashes with another bot's commands, or make it the same as another bot on purpose. By default, it is set to `!`, so viewers would run commands like `!shoot`.
+
+```yml
+# .env Line 11
+COMMANDPREFIX=!
+```
+
+You can edit the options for each command in the Command Settings section. For example, say I want to disable the Scope command:
+
+```yml
+# .env Line 65
+CMD_SCOPE_enabled=false
+```
+
+The `CMD_X_input` options use the AHK Key Names. [Here's a list](https://www.autohotkey.com/docs/KeyList.htm). 
+
+Now let's say I want to enable the Scope command, let my viewers run it by running `!telescope`, make it stay scoped for 4.2 seconds, and make it only run 33% of the time:
+```yml
+#.env Line 65-69
+CMD_SCOPE_enabled=true
+CMD_SCOPE_command=telescope
+CMD_SCOPE_input=RButton
+CMD_SCOPE_duration=4.2
+CMD_SCOPE_probability=0.33
+```
