@@ -18,7 +18,9 @@ Make sure you have a relatively new version of Python 3 installed. I tested this
 Also install AutoHotKey from their official website.
 
 Then. run the following command in your terminal:
-`pip install ahk irc python-dotenv` 
+```
+pip install ahk irc python-dotenv
+```
 
 3. **Input your Twitch account details.**
 
@@ -27,9 +29,12 @@ Rename the `default.env` file to just `.env` (set the file name to be blank). Op
 Head to [twitchapps.com/tmi](https://twitchapps.com/tmi/) to get your Chat OAuth Token to copy and paste next to the second option. 
 
 Example of how it should be formatted:
-```
+```yml
+# Write the config values to the right of the equals sign, with no space inbetween.
+# Your Twitch username
 TWITCHUSERNAME=r2d2vader
-TWITCHTOKEN=oauth:xxxxxxxxxxxxxxxxxxxx
+# Your Twitch Chat OAuth token (from https://twitchapps.com/tmi/)
+TWITCHTOKEN=oauth:xxxxxxxxx
 ```
 
 4. **Run the program** by running `python main.py` in your terminal.
