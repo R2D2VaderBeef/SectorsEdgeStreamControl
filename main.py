@@ -9,6 +9,11 @@ import commands
 import asyncio
 prefix = os.getenv('COMMANDPREFIX')
 
+# Make sure the Twitch credentials have been added to the .env file
+if os.getenv('TWITCHUSERNAME') == "" or os.getenv('TWITCHTOKEN') == "":
+    print("Please input your Twitch credentials in the .env file.")
+    exit(0)
+
 # Login to IRC as the streamer and listen for commands in Twitch Chat
 class TwitchListener(irc.bot.SingleServerIRCBot):
     def __init__(self, username, token, channel):

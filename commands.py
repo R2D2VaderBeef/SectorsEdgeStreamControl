@@ -10,6 +10,13 @@ walk = os.getenv("CMD_WALK_command")
 left = os.getenv("CMD_LEFT_command")
 right = os.getenv("CMD_RIGHT_command")
 back = os.getenv("CMD_BACK_command")
+crouch = os.getenv("CMD_CROUCH_command")
+jump = os.getenv("CMD_JUMP_command")
+shoot = os.getenv("CMD_SHOOT_command")
+scope = os.getenv("CMD_SCOPE_command")
+reload = os.getenv("CMD_RELOAD_command")
+melee = os.getenv("CMD_MELEE_command")
+grenade = os.getenv("CMD_GRENADE_command")
 
 # Check if the command matches any of the actions, and if so, run it. 
 async def handleCommand(command):
@@ -21,20 +28,20 @@ async def handleCommand(command):
             await act("RIGHT")
         elif command == back:
             await act("BACK")
-        elif command == "crouch":
-            await crouch.act(0.8)
-        elif command == "jump":
-            await jump.act()    
-        elif command == "shoot":
-            await shoot.act(1/2)
-        elif command == "scope":
-            await scope.act(1.5)
-        elif command == "reload":
-            await reload.act(1/4)
-        elif command == "melee":
-            await melee.act()
-        elif command == "grenade":
-            await grenade.act(1/5)
+        elif command == crouch:
+            await act("CROUCH")
+        elif command == jump:
+            await act("JUMP")    
+        elif command == shoot:
+            await act("SHOOT")
+        elif command == scope:
+            await act("SCOPE")
+        elif command == reload:
+            await act("RELOAD")
+        elif command == melee:
+            await act("MELEE")
+        elif command == grenade:
+            await act("GRENADE")
         else:
             print("Not a valid command, skipping.")
 
