@@ -8,17 +8,18 @@ import random
 # Set all the command variables
 walk = os.getenv("CMD_WALK_command")
 left = os.getenv("CMD_LEFT_command")
-left = os.getenv("CMD_RIGHT_command")
+right = os.getenv("CMD_RIGHT_command")
+back = os.getenv("CMD_BACK_command")
 
 # Check if the command matches any of the actions, and if so, run it. 
 async def handleCommand(command):
         if command == walk:
             await act("WALK")
-        elif command == "left":
+        elif command == left:
             await act("LEFT")
-        elif command == "right":
+        elif command == right:
             await act("RIGHT")
-        elif command == "back":
+        elif command == back:
             await act("BACK")
         elif command == "crouch":
             await crouch.act(0.8)
