@@ -1,5 +1,5 @@
 # SectorsEdgeStreamControl
-### Let your Twitch Stream control your Sector's Edge gameplay!
+### Let your Twitch Chat control your Sector's Edge gameplay!
 
 This code listens to messages from your Twitch chat (via your own Twitch account) and presses buttons/keys accordingly to make you do an action in-game. 
 
