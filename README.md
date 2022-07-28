@@ -13,7 +13,7 @@ Alternatively, you can `git clone` this repository and keep the files updated wi
 
 2. **Install the dependencies.**
 
-Make sure you have a relatively new version of Python 3 installed. I tested this on Python 3.10
+Make sure you have a relatively new version of Python 3 installed. I tested this on Python 3.10 and would recommend using the latest stable version if it works.
 
 Also install AutoHotKey from their official website.
 
