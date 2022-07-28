@@ -21,7 +21,7 @@ Make sure you have a relatively new version of Python 3 installed. I tested this
 
 Also install AutoHotKey from their official website.
 
-Then. run the following command in your terminal:
+Then, run the following command in your terminal:
 ```
 pip install ahk irc python-dotenv
 ```

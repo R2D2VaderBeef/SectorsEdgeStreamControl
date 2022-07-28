@@ -36,7 +36,7 @@ class TwitchListener(irc.bot.SingleServerIRCBot):
     def on_pubmsg(self, c, e):
         if e.arguments[0][:1] == prefix:
             cmd = e.arguments[0].split(' ')[0][1:]
-            asyncio.run(commands.handleCommand(cmd))
+            commands.handleCommand(cmd)
         return
 
 # Load the Twitch login values from the .env file and run the IRC 'bot' above

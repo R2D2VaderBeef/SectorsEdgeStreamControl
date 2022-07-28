@@ -19,29 +19,29 @@ melee = os.getenv("CMD_MELEE_command")
 grenade = os.getenv("CMD_GRENADE_command")
 
 # Check if the command matches any of the actions, and if so, run it. 
-async def handleCommand(command):
+def handleCommand(command):
         if command == walk:
-            await act("WALK")
+            asyncio.run(act("WALK"))
         elif command == left:
-            await act("LEFT")
+            asyncio.run(act("LEFT"))
         elif command == right:
-            await act("RIGHT")
+            asyncio.run(act("RIGHT"))
         elif command == back:
-            await act("BACK")
+            asyncio.run(act("BACK"))
         elif command == crouch:
-            await act("CROUCH")
+            asyncio.run(act("CROUCH"))
         elif command == jump:
-            await act("JUMP")    
+            asyncio.run(act("JUMP"))   
         elif command == shoot:
-            await act("SHOOT")
+            asyncio.run(act("SHOOT"))
         elif command == scope:
-            await act("SCOPE")
+            asyncio.run(act("SCOPE"))
         elif command == reload:
-            await act("RELOAD")
+            asyncio.run(act("RELOAD"))
         elif command == melee:
-            await act("MELEE")
+            asyncio.run(act("MELEE"))
         elif command == grenade:
-            await act("GRENADE")
+            asyncio.run(act("GRENADE"))
         else:
             print("Not a valid command, skipping.")
 
