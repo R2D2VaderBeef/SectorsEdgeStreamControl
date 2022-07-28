@@ -80,11 +80,20 @@ You can edit the options for each command in the Command Settings section. For e
 CMD_SCOPE_enabled=false
 ```
 
+Here's an explanation of the Command Settings which is also present within the file:
+```yml
+CMD_X_enabled: Whether the command can be run in Twitch chat. 
+CMD_X_command: The actual command users can run in Twitch chat.
+CMD_X_input: For simple button press commands, the keybind to press (temporary solution).
+CMD_X_duration: For held inputs, how long to hold them for (in seconds). For non-held inputs, this is 0.
+CMD_X_probability: If a random decimal is lower than or equal to this, the command will run (decimal between 0 and 1). By default these are all set to 1 (100% chance of running).
+```
+
 The `CMD_X_input` options use the AHK Key Names. [Here's a list](https://www.autohotkey.com/docs/KeyList.htm). 
 
-Now let's say I want to enable the Scope command, let my viewers run it by running `!telescope`, make it stay scoped for 4.2 seconds, and make it only run 33% of the time:
+Now let's say I want to enable the Scope command, let my viewers run it by running `!telescope`, make it stay scoped for 4.2 seconds, and make it only run around 33% of the time:
 ```yml
-#.env Line 65-69
+# .env Line 65-69
 CMD_SCOPE_enabled=true
 CMD_SCOPE_command=telescope
 CMD_SCOPE_input=RButton
