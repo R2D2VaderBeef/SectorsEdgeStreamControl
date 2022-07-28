@@ -5,7 +5,7 @@ This code listens to messages from your Twitch chat (via your own Twitch account
 
 Currently, this system only supports Hold to Scope / Hold to Crouch rather than Toggle. You also need to input your binds manually if they are different to mine.
 
-Neither of these caveats will be present in the final version, in which I hope to pull binds directly from the game settings files.
+Neither of these caveats will be present in the first 'complete' version, in which I hope to pull binds directly from the game settings files.
 
 ## Setup
 
@@ -82,7 +82,7 @@ CMD_SCOPE_enabled=false
 
 Here's an explanation of the Command Settings which is also present within the file:
 ```yml
-CMD_X_enabled: Whether the command can be run in Twitch chat. 
+CMD_X_enabled: Whether the command can be run in Twitch chat (true / false). 
 CMD_X_command: The actual command users can run in Twitch chat.
 CMD_X_input: For simple button press commands, the keybind to press (temporary solution).
 CMD_X_duration: For held inputs, how long to hold them for (in seconds). For non-held inputs, this is 0.
