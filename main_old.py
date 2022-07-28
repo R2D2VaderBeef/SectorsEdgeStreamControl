@@ -3,17 +3,17 @@ import asyncio
 import os
 
 # import every movement file
-from actions import walk
-from actions import left
-from actions import right
-from actions import back
-from actions import crouch
-from actions import jump
-from actions import shoot
-from actions import scope
-from actions import reload
-from actions import melee
-from actions import grenade
+from actions_old import walk
+from actions_old import left
+from actions_old import right
+from actions_old import back
+from actions_old import crouch
+from actions_old import jump
+from actions_old import shoot
+from actions_old import scope
+from actions_old import reload
+from actions_old import melee
+from actions_old import grenade
 
 # Sample way to run an action
 #async def test():

@@ -7,6 +7,7 @@ load_dotenv()
 import os
 import commands
 import asyncio
+prefix = os.getenv('COMMANDPREFIX')
 
 # Login to IRC as the streamer and listen for commands in Twitch Chat
 class TwitchListener(irc.bot.SingleServerIRCBot):
@@ -28,7 +29,7 @@ class TwitchListener(irc.bot.SingleServerIRCBot):
 
     # Listen for messages, and if they start with the prefix, try to execute them as commands
     def on_pubmsg(self, c, e):
-        if e.arguments[0][:1] == str(os.getenv('COMMANDPREFIX')):
+        if e.arguments[0][:1] == prefix:
             cmd = e.arguments[0].split(' ')[0][1:]
             asyncio.run(commands.handleCommand(cmd))
         return
