@@ -28,7 +28,7 @@ pip install ahk irc python-dotenv
 
 3. **Input your Twitch account details.**
 
-Rename the `default.env` file to just `.env` (set the file name to be blank). Open it and input your Twitch username next to the first option.
+Rename the `default.env` file to just `.env` (set the file name to be blank, leaving just the file format). Open it and input your Twitch username next to the first option.
 
 Head to [twitchapps.com/tmi](https://twitchapps.com/tmi/) to get your Chat OAuth Token to copy and paste next to the second option. 
 
